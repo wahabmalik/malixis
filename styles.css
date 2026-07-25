@@ -97,6 +97,12 @@ a {
   letter-spacing: -0.03em;
 }
 
+.brand-name em {
+  font-style: normal;
+  font-weight: 600;
+  color: var(--accent);
+}
+
 .nav {
   display: flex;
   gap: 1.6rem;
