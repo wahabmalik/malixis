@@ -200,6 +200,31 @@
     else window.addEventListener("load", scheduleFinish);
   }
 
+  /* ==================== Hero background video ==================== */
+  var heroVideo = document.querySelector(".hero-video");
+  if (heroVideo) {
+    if (reduceMotion) {
+      heroVideo.removeAttribute("autoplay");
+      heroVideo.pause();
+    } else if ("IntersectionObserver" in window) {
+      // Only play while the hero is on screen
+      var videoObserver = new IntersectionObserver(
+        function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              var p = heroVideo.play();
+              if (p && p.catch) p.catch(function () {});
+            } else {
+              heroVideo.pause();
+            }
+          });
+        },
+        { threshold: 0.05 }
+      );
+      videoObserver.observe(heroVideo);
+    }
+  }
+
   /* ==================== Hero parallax ==================== */
   var hero = document.querySelector(".hero");
   if (hero && !reduceMotion) {
