@@ -449,9 +449,15 @@
       function (entries) {
         entries.forEach(function (entry) {
           if (!entry.isIntersecting) return;
-          if (activeLink) activeLink.classList.remove("is-active");
+          if (activeLink) {
+            activeLink.classList.remove("is-active");
+            activeLink.removeAttribute("aria-current");
+          }
           activeLink = linkById[entry.target.id];
-          if (activeLink) activeLink.classList.add("is-active");
+          if (activeLink) {
+            activeLink.classList.add("is-active");
+            activeLink.setAttribute("aria-current", "true");
+          }
         });
       },
       { rootMargin: "-30% 0px -60% 0px" }
@@ -502,6 +508,9 @@
       if (invalid.length > 0) {
         errorEl.hidden = false;
         invalid[0].focus();
+        form.classList.remove("is-shaking");
+        void form.offsetWidth; // restart the animation
+        form.classList.add("is-shaking");
         return;
       }
 
