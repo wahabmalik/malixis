@@ -274,7 +274,7 @@
 
   /* ==================== Card spotlight (gold light tracks cursor) ==================== */
   if (finePointer) {
-    var spotSelector = ".solution-card, .case-card, .testimonial-card, .contact-form, .project-card, .process-step, .stat";
+    var spotSelector = ".solution-card, .case-card, .testimonial-card, .contact-form, .project-card, .process-step, .stat, .cta-band";
     document.querySelectorAll(spotSelector).forEach(function (el) {
       el.classList.add("spot");
     });
@@ -389,6 +389,51 @@
 
     document.addEventListener("visibilitychange", syncRunning);
     syncRunning();
+  }
+
+  /* ==================== Floating strategy-call CTA ==================== */
+  var floatingCta = document.querySelector(".floating-cta");
+  if (floatingCta && "IntersectionObserver" in window) {
+    var heroSection = document.querySelector(".hero");
+    var contactSection = document.getElementById("contact");
+    var footerSection = document.querySelector(".site-footer");
+    var nearTop = true;
+    var nearAction = false;
+
+    var syncFloatingCta = function () {
+      floatingCta.classList.toggle("is-shown", !nearTop && !nearAction);
+    };
+
+    if (heroSection) {
+      new IntersectionObserver(function (entries) {
+        nearTop = entries[0].isIntersecting;
+        syncFloatingCta();
+      }, { threshold: 0.1 }).observe(heroSection);
+    }
+
+    var visibleActions = { contact: false, footer: false };
+    var actionObserver = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.target === contactSection) visibleActions.contact = e.isIntersecting;
+        if (e.target === footerSection) visibleActions.footer = e.isIntersecting;
+      });
+      nearAction = visibleActions.contact || visibleActions.footer;
+      syncFloatingCta();
+    }, { threshold: 0.05 });
+    if (contactSection) actionObserver.observe(contactSection);
+    if (footerSection) actionObserver.observe(footerSection);
+  }
+
+  /* ==================== Strategy-call prefill ==================== */
+  var messageField = document.getElementById("cf-message");
+  if (messageField) {
+    document.querySelectorAll("[data-prefill-call]").forEach(function (el) {
+      el.addEventListener("click", function () {
+        if (!messageField.value.trim()) {
+          messageField.value = "I'd like to book a 30-minute strategy call. Some context on what we're building: ";
+        }
+      });
+    });
   }
 
   /* ==================== Active nav link tracking ==================== */
