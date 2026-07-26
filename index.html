@@ -1,249 +1,914 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Malixis | Digital Growth Systems</title>
-    <meta
-      name="description"
-      content="Malixis builds digital systems that grow your business."
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="./styles.css" />
-  </head>
-  <body>
-    <header class="site-header">
-      <div class="container nav-wrap">
-        <a class="brand" href="#">
-          <span class="brand-mark">M</span>
-          <span class="brand-name">MALIXIS</span>
-        </a>
-        <nav class="nav">
-          <a href="#system">System</a>
-          <a href="#services">Services</a>
-          <a href="#process">Process</a>
-          <a href="#plans">Plans</a>
-          <a href="#faq">FAQ</a>
-        </nav>
-        <a href="#cta" class="btn btn-primary">Book a Free Consultation</a>
+<head>
+  <meta charset="UTF-8" />
+  <script>document.documentElement.classList.add("js");</script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Malixis | Senior AI &amp; Software Development Studio</title>
+  <meta name="description" content="Malixis ships production AI systems and mission-critical software for enterprises and funded startups. Fixed scopes, senior-only teams, 120+ systems in production, and 98% of clients hire us again." />
+  <meta name="keywords" content="AI development agency, software development studio, machine learning consultancy, product engineering, LLM integration, enterprise software" />
+  <meta name="author" content="Malixis" />
+  <meta name="robots" content="index, follow, max-image-preview:large" />
+  <meta name="theme-color" content="#07080c" />
+  <link rel="canonical" href="https://malixis.com/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Malixis" />
+  <meta property="og:title" content="Malixis | Senior AI &amp; Software Development Studio" />
+  <meta property="og:description" content="We ship the software your company is betting on. Production AI and mission-critical systems: fixed scopes, senior-only teams, zero abandoned engagements in nine years." />
+  <meta property="og:url" content="https://malixis.com/" />
+  <meta property="og:image" content="https://malixis.com/assets/hero-og.jpg" />
+  <meta property="og:image:width" content="1376" />
+  <meta property="og:image:height" content="768" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://malixis.com/assets/hero-og.jpg" />
+  <meta name="twitter:title" content="Malixis | Senior AI &amp; Software Development Studio" />
+  <meta name="twitter:description" content="We ship the software your company is betting on." />
+
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%2307080c'/%3E%3Cpath d='M16 6l2.4 7.6L26 16l-7.6 2.4L16 26l-2.4-7.6L6 16l7.6-2.4z' fill='%237c9cff'/%3E%3C/svg%3E" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="./styles.css" />
+  <script src="./script.js" defer></script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://malixis.com/#org",
+        "name": "Malixis",
+        "url": "https://malixis.com/",
+        "description": "Senior AI & software development studio shipping production AI systems and mission-critical software for enterprises and funded startups.",
+        "email": "hello@malixis.com",
+        "foundingDate": "2017",
+        "slogan": "We ship the software your company is betting on.",
+        "knowsAbout": ["Artificial Intelligence", "Machine Learning", "Software Engineering", "Product Design", "Cloud Infrastructure", "Data Engineering"]
+      },
+      {
+        "@type": "WebSite",
+        "url": "https://malixis.com/",
+        "name": "Malixis",
+        "publisher": { "@id": "https://malixis.com/#org" }
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Who do you typically work with?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Funded startups shipping their first serious product, scale-ups mid-rearchitecture, and enterprise teams accountable for systems that cannot fail, most often in fintech, healthcare, logistics, and AI-native software. We run a small number of engagements at once, and we protect that limit because it is why the work holds up." }
+          },
+          {
+            "@type": "Question",
+            "name": "How do engagements work?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Every engagement starts with a two-week Discovery sprint that produces an architecture, a delivery plan, and a fixed-scope proposal with a price attached. That plan is yours to keep. Take it to any builder you like. Most clients continue with us, but the decision should be easy either way." }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you build production AI or prototypes?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Production systems. Prototypes are how we test assumptions in week two, not what we hand over in week twelve. Every AI system we ship includes an evaluation suite, monitoring, guardrails, and a documented cost model, because a model that cannot be measured cannot be trusted." }
+          },
+          {
+            "@type": "Question",
+            "name": "Who will actually work on our project?",
+            "acceptedAnswer": { "@type": "Answer", "text": "The people you meet in the first call. There is no bench of juniors behind a senior pitch. Our average engineer has eleven years of experience, and no one splits their week across multiple clients." }
+          },
+          {
+            "@type": "Question",
+            "name": "Who owns the code and IP?",
+            "acceptedAnswer": { "@type": "Answer", "text": "You do, from the first commit. We build in your repositories and your cloud accounts, so ownership is never a handover at the end. It is the default from day one. If we vanished mid-project, you would lose nothing but us." }
+          },
+          {
+            "@type": "Question",
+            "name": "How do you handle security and compliance?",
+            "acceptedAnswer": { "@type": "Answer", "text": "We work inside your compliance envelope: least-privilege access, SSO, audit trails, and infrastructure that lives in your cloud accounts, not ours. We have delivered under SOC 2, HIPAA, and PCI-DSS constraints, and our engineers sign your security policies before touching a repository." }
+          },
+          {
+            "@type": "Question",
+            "name": "What happens after launch?",
+            "acceptedAnswer": { "@type": "Answer", "text": "A stabilization period and a documented handover are built into every engagement, so your team can run what we built. Most clients then keep a senior team on retainer for new capabilities. 98% of our business is companies that have shipped with us before." }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <div class="preloader" aria-hidden="true">
+    <div class="preloader-inner">
+      <svg class="preloader-mark" width="36" height="36" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+        <path d="M16 3l3.1 9.9L29 16l-9.9 3.1L16 29l-3.1-9.9L3 16l9.9-3.1z" fill="url(#sparkGradLoader)" />
+        <defs>
+          <linearGradient id="sparkGradLoader" x1="3" y1="3" x2="29" y2="29" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#b3c7ff" />
+            <stop offset="1" stop-color="#5a6cf0" />
+          </linearGradient>
+        </defs>
+      </svg>
+      <span class="preloader-name"><span>M</span><span>A</span><span>L</span><span>I</span><span>X</span><span>I</span><span>S</span></span>
+      <span class="preloader-bar"></span>
+    </div>
+  </div>
+
+  <div class="page-glow" aria-hidden="true"></div>
+  <div class="cursor-light" aria-hidden="true"></div>
+
+  <!-- ============ NAVIGATION ============ -->
+  <header class="site-header" id="top">
+    <div class="container header-inner">
+      <a class="brand" href="#top" aria-label="Malixis home">
+        <svg class="brand-mark" width="22" height="22" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+          <path d="M16 3l3.1 9.9L29 16l-9.9 3.1L16 29l-3.1-9.9L3 16l9.9-3.1z" fill="url(#sparkGrad)" />
+          <defs>
+            <linearGradient id="sparkGrad" x1="3" y1="3" x2="29" y2="29" gradientUnits="userSpaceOnUse">
+              <stop stop-color="#b3c7ff" />
+              <stop offset="1" stop-color="#5a6cf0" />
+            </linearGradient>
+          </defs>
+        </svg>
+        <span class="brand-name">Malixis</span>
+      </a>
+
+      <nav class="primary-nav" aria-label="Primary">
+        <ul>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#solutions">Solutions</a></li>
+          <li><a href="#work">Work</a></li>
+          <li><a href="#process">Process</a></li>
+          <li><a href="#compare">Why us</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <a href="#contact" class="btn btn-primary btn-sm">Book a call</a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">
+          <span class="nav-toggle-bar" aria-hidden="true"></span>
+          <span class="nav-toggle-bar" aria-hidden="true"></span>
+        </button>
       </div>
-    </header>
+    </div>
 
-    <main>
-      <section class="hero">
-        <div class="container hero-grid">
-          <div>
-            <p class="eyebrow">Digital Growth Partner</p>
-            <h1>We Build Digital Systems That Grow Your Business</h1>
-            <p class="subhead">
-              Marketing, websites, SEO, and automation - everything you need to
-              scale in one place.
-            </p>
-            <div class="actions">
-              <a href="#cta" class="btn btn-primary">Book a Free Consultation</a>
-              <a href="#work" class="btn btn-ghost">View Our Work</a>
+    <div class="mobile-menu" id="mobile-menu" hidden>
+      <nav aria-label="Mobile">
+        <ul>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#solutions">Solutions</a></li>
+          <li><a href="#work">Work</a></li>
+          <li><a href="#process">Process</a></li>
+          <li><a href="#compare">Why us</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <a href="#contact" class="btn btn-primary btn-block">Book a strategy call</a>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ============ HERO ============ -->
+    <section class="hero" aria-labelledby="hero-heading">
+      <div class="hero-media" aria-hidden="true">
+        <video class="hero-video" autoplay muted loop playsinline preload="metadata" poster="./assets/hero.webp" width="1600" height="892">
+          <source src="./assets/hero.mp4" type="video/mp4" />
+        </video>
+      </div>
+      <div class="hero-glow" aria-hidden="true"></div>
+      <div class="hero-grid-lines" aria-hidden="true"></div>
+      <canvas class="hero-particles" aria-hidden="true"></canvas>
+      <div class="container hero-inner">
+        <p class="eyebrow reveal"><span class="eyebrow-dot" aria-hidden="true"></span>AI &amp; Software Development Studio<span class="eyebrow-extra"> · Est. 2017</span></p>
+        <h1 id="hero-heading" class="hero-title reveal">
+          We ship the software<br />
+          your company is <em>betting&nbsp;on.</em>
+        </h1>
+        <p class="hero-sub reveal">
+          Malixis is a senior AI and software studio for products where failure
+          is expensive. Fixed scopes, working software every week, and a
+          nine-year record of zero abandoned engagements.
+        </p>
+        <div class="hero-actions reveal">
+          <a href="#contact" class="btn btn-primary" data-prefill-call>Book a strategy call
+            <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <a href="#work" class="btn btn-ghost">See what we've shipped</a>
+        </div>
+
+        <ul class="hero-badges reveal" aria-label="Engagement guarantees">
+          <li><svg width="12" height="12" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2.5 8.5l4 4 7-9" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>NDA by default</li>
+          <li><svg width="12" height="12" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2.5 8.5l4 4 7-9" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>IP yours from commit one</li>
+          <li><svg width="12" height="12" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2.5 8.5l4 4 7-9" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Senior engineers only</li>
+          <li><svg width="12" height="12" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2.5 8.5l4 4 7-9" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Fixed-scope pricing</li>
+        </ul>
+
+        <dl class="hero-stats reveal" aria-label="Studio statistics">
+          <div class="stat">
+            <dt>Systems in production</dt>
+            <dd><span data-count="120">120</span><span class="stat-suffix">+</span></dd>
+          </div>
+          <div class="stat">
+            <dt>Processed by our builds, yearly</dt>
+            <dd><span class="stat-prefix">$</span><span data-count="6">6</span><span class="stat-suffix">B</span></dd>
+          </div>
+          <div class="stat">
+            <dt>Years, zero abandoned projects</dt>
+            <dd><span data-count="9">9</span></dd>
+          </div>
+          <div class="stat">
+            <dt>Clients who hire us again</dt>
+            <dd><span data-count="98">98</span><span class="stat-suffix">%</span></dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- ============ TRUSTED BY ============ -->
+    <section class="trusted" aria-label="Trusted by leading companies">
+      <div class="container">
+        <p class="trusted-label">Trusted with systems that move money, medicine, and freight</p>
+      </div>
+      <div class="marquee" data-marquee>
+        <ul class="marquee-track">
+          <li>Ardent&nbsp;Capital</li>
+          <li>Novaria&nbsp;Health</li>
+          <li>Polarline</li>
+          <li>Quantia</li>
+          <li>Halcyon&nbsp;Systems</li>
+          <li>Vantora</li>
+          <li>Meridian&nbsp;&amp;&nbsp;Co</li>
+          <li>Aster&nbsp;Labs</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ SERVICES ============ -->
+    <section class="section services" id="services" aria-labelledby="services-heading">
+      <div class="container">
+        <header class="section-head reveal" data-num="01">
+          <p class="eyebrow"><span class="eyebrow-index">01</span>Services</p>
+          <h2 id="services-heading" class="section-title">One team, accountable for<br /><em>the whole system.</em></h2>
+          <p class="section-sub">When strategy, design, engineering, and operations live under one roof, nothing falls between vendors, and accountability has nowhere to hide.</p>
+        </header>
+
+        <ul class="service-list">
+          <li class="service-row reveal">
+            <span class="service-index" aria-hidden="true">01</span>
+            <div class="service-main">
+              <h3>AI &amp; Machine Learning</h3>
+              <p>AI that survives contact with production: retrieval pipelines with measured accuracy, evaluation suites that catch regressions before your users do, and guardrails your compliance team can sign off on.</p>
             </div>
-            <div class="trust">
-              <span>Trusted by growing businesses</span>
-              <div class="logos">
-                <span>Logo 1</span>
-                <span>Logo 2</span>
-                <span>Logo 3</span>
-              </div>
+            <ul class="service-tags" aria-label="Capabilities">
+              <li>LLM integration</li><li>RAG systems</li><li>AI agents</li><li>Model evaluation</li>
+            </ul>
+          </li>
+          <li class="service-row reveal">
+            <span class="service-index" aria-hidden="true">02</span>
+            <div class="service-main">
+              <h3>Product Engineering</h3>
+              <p>Web and mobile products engineered like infrastructure: typed end to end, tested against the failures you'll actually hit, and fast enough that speed becomes part of the product.</p>
             </div>
-          </div>
-          <div class="visual">
-            <div class="panel">
-              <p>Growth Dashboard</p>
-              <div class="chart">
-                <span class="line l1"></span>
-                <span class="line l2"></span>
-                <span class="line l3"></span>
-              </div>
-              <div class="stats">
-                <div><strong>+241%</strong><span>Leads</span></div>
-                <div><strong>3.2x</strong><span>Conversion</span></div>
-                <div><strong>+78%</strong><span>Visibility</span></div>
-              </div>
+            <ul class="service-tags" aria-label="Capabilities">
+              <li>Web applications</li><li>Mobile apps</li><li>APIs</li><li>Design systems</li>
+            </ul>
+          </li>
+          <li class="service-row reveal">
+            <span class="service-index" aria-hidden="true">03</span>
+            <div class="service-main">
+              <h3>Platform &amp; Cloud</h3>
+              <p>Architecture that scales without drama and fails without headlines. Infrastructure as code, zero-downtime releases, and a cloud bill your finance team can forecast.</p>
             </div>
+            <ul class="service-tags" aria-label="Capabilities">
+              <li>Cloud architecture</li><li>DevOps &amp; SRE</li><li>Security</li><li>Cost engineering</li>
+            </ul>
+          </li>
+          <li class="service-row reveal">
+            <span class="service-index" aria-hidden="true">04</span>
+            <div class="service-main">
+              <h3>Data Engineering</h3>
+              <p>Most AI initiatives die in the data layer. We build the pipelines, warehouses, and quality checks that make your data something your models and your board reports can rely on.</p>
+            </div>
+            <ul class="service-tags" aria-label="Capabilities">
+              <li>Data pipelines</li><li>Warehousing</li><li>Streaming</li><li>Analytics</li>
+            </ul>
+          </li>
+          <li class="service-row reveal">
+            <span class="service-index" aria-hidden="true">05</span>
+            <div class="service-main">
+              <h3>Product Design</h3>
+              <p>Design that shortens the distance between what a user wants and what happens next. Researched with real users, tested before it's built, and systematized so your team can extend it without us.</p>
+            </div>
+            <ul class="service-tags" aria-label="Capabilities">
+              <li>UX research</li><li>Interface design</li><li>Prototyping</li><li>Motion</li>
+            </ul>
+          </li>
+          <li class="service-row reveal">
+            <span class="service-index" aria-hidden="true">06</span>
+            <div class="service-main">
+              <h3>Strategy &amp; Advisory</h3>
+              <p>Senior judgment for decisions too expensive to get wrong: technical due diligence, architecture reviews, and AI roadmaps grounded in what production actually demands.</p>
+            </div>
+            <ul class="service-tags" aria-label="Capabilities">
+              <li>Technical audits</li><li>AI roadmaps</li><li>Due diligence</li><li>Embedded CTOs</li>
+            </ul>
+          </li>
+        </ul>
+
+        <div class="cta-line reveal">
+          <p>Not sure which of the six your problem needs?</p>
+          <a href="#contact" data-prefill-call>That's what the first call is for. Book 30 minutes
+            <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SOLUTIONS ============ -->
+    <section class="section solutions" id="solutions" aria-labelledby="solutions-heading">
+      <div class="container">
+        <header class="section-head reveal" data-num="02">
+          <p class="eyebrow"><span class="eyebrow-index">02</span>Solutions</p>
+          <h2 id="solutions-heading" class="section-title">Four engagements. Each with<br />a <em>defined finish line.</em></h2>
+          <p class="section-sub">Fixed scope, a named senior team, and exit criteria you agree to before work begins. Here is where most companies start.</p>
+        </header>
+
+        <div class="solution-grid">
+          <article class="solution-card glass reveal">
+            <div class="solution-icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M12 3v6m0 0l7 12H5l7-12z" pathLength="1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <h3>Launch</h3>
+            <p class="solution-kicker">Zero to one, once</p>
+            <p>Your validated idea becomes a production product in a single engagement: architecture, design, build, and launch by the same senior team. No handoffs, no drift, no version two of version one.</p>
+            <p class="solution-meta">For funded startups with a date that matters</p>
+          </article>
+
+          <article class="solution-card glass reveal">
+            <div class="solution-icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M4 20v-6m6 6V10m6 10V4m4 16H2" pathLength="1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <h3>Scale</h3>
+            <p class="solution-kicker">When growth outruns the code</p>
+            <p>The rewrite you've been postponing, done without pausing the roadmap. We rebuild what's buckling under growth, and measure it in latency, uptime, and how fast your team ships afterward.</p>
+            <p class="solution-meta">For scale-ups outgrowing their architecture</p>
+          </article>
+
+          <article class="solution-card glass reveal">
+            <div class="solution-icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M4 7l8-4 8 4-8 4-8-4zm0 5l8 4 8-4M4 17l8 4 8-4" pathLength="1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <h3>Modernize</h3>
+            <p class="solution-kicker">Replatform without the pause</p>
+            <p>We migrate critical platforms in reversible steps, with the legacy system running until its replacement has proven itself. Your business never has to hold its breath.</p>
+            <p class="solution-meta">For enterprises that can't stop to rebuild</p>
+          </article>
+
+          <article class="solution-card glass reveal">
+            <div class="solution-icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M12 2l2.4 7.6L22 12l-7.6 2.4L12 22l-2.4-7.6L2 12l7.6-2.4z" pathLength="1" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
+            </div>
+            <h3>Automate</h3>
+            <p class="solution-kicker">Hours back, every week</p>
+            <p>We put AI where the payroll hours actually go: document processing, decision support, and workflows that used to need a queue of people. Success is measured in hours returned, not demos delivered.</p>
+            <p class="solution-meta">For operations that still run on manual work</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FEATURED PROJECTS ============ -->
+    <section class="section work" id="work" aria-labelledby="work-heading">
+      <div class="container">
+        <header class="section-head reveal" data-num="03">
+          <p class="eyebrow"><span class="eyebrow-index">03</span>Featured Projects</p>
+          <h2 id="work-heading" class="section-title">The work is confidential.<br /><em>The results aren't.</em></h2>
+          <p class="section-sub">Names are changed to honor NDAs; the numbers are as reported by the clients themselves. Every system below is in production today.</p>
+        </header>
+
+        <div class="project-stack">
+          <article class="project-card reveal">
+            <div class="project-visual visual-atlas" aria-hidden="true">
+              <img src="./assets/project-atlas.webp" alt="" loading="lazy" decoding="async" width="1200" height="896" />
+            </div>
+            <div class="project-body">
+              <p class="project-tag">Fintech · AI Platform</p>
+              <h3>Atlas: AI underwriting engine</h3>
+              <p>Ardent Capital's analysts spent six days on every credit decision. Atlas reads the file, scores the risk, and writes the explanation a regulator expects, while the applicant is still on the call.</p>
+              <dl class="project-metrics">
+                <div><dt>Decision time</dt><dd>4.2s <span>from 6 days</span></dd></div>
+                <div><dt>Volume processed</dt><dd>$2.4B <span>annually</span></dd></div>
+              </dl>
+            </div>
+          </article>
+
+          <article class="project-card reveal">
+            <div class="project-visual visual-pulse" aria-hidden="true">
+              <img src="./assets/project-pulse.webp" alt="" loading="lazy" decoding="async" width="1200" height="896" />
+            </div>
+            <div class="project-body">
+              <p class="project-tag">Logistics · Real-time Systems</p>
+              <h3>Pulse: orchestration network</h3>
+              <p>Polarline ran 40,000 daily shipments across 14 countries on spreadsheets and phone calls. Pulse gives their operators one live view, with ETAs reliable enough that customers stopped calling to check.</p>
+              <dl class="project-metrics">
+                <div><dt>Daily shipments</dt><dd>40K <span>coordinated live</span></dd></div>
+                <div><dt>Delivery accuracy</dt><dd>99.1% <span>on-time rate</span></dd></div>
+              </dl>
+            </div>
+          </article>
+
+          <article class="project-card reveal">
+            <div class="project-visual visual-sage" aria-hidden="true">
+              <img src="./assets/project-sage.webp" alt="" loading="lazy" decoding="async" width="1200" height="896" />
+            </div>
+            <div class="project-body">
+              <p class="project-tag">Healthcare · Clinical AI</p>
+              <h3>Sage: clinical intelligence copilot</h3>
+              <p>Novaria's physicians were finishing charts at home. Sage drafts the note during the encounter and cites the history behind every suggestion. The physician approves, edits, or discards. Adoption was never mandated; it reached 93% anyway.</p>
+              <dl class="project-metrics">
+                <div><dt>Documentation time</dt><dd>−71% <span>per encounter</span></dd></div>
+                <div><dt>Clinician adoption</dt><dd>93% <span>weekly active</span></dd></div>
+              </dl>
+            </div>
+          </article>
+        </div>
+
+        <div class="cta-line reveal">
+          <p>Every project here started as a cautious first call.</p>
+          <a href="#contact" data-prefill-call>Make yours. Book a strategy call
+            <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PROCESS ============ -->
+    <section class="section process" id="process" aria-labelledby="process-heading">
+      <div class="container">
+        <header class="section-head reveal" data-num="04">
+          <p class="eyebrow"><span class="eyebrow-index">04</span>Development Process</p>
+          <h2 id="process-heading" class="section-title">The process is boring.<br /><em>Deliberately.</em></h2>
+          <p class="section-sub">Five phases, each ending in something you can see, test, or veto. Surprises belong in your market, not in your delivery schedule.</p>
+        </header>
+
+        <ol class="process-track">
+          <li class="process-step reveal">
+            <span class="process-num">Phase 01</span>
+            <h3>Discover</h3>
+            <p>Two weeks inside your problem: users, data, constraints, failure modes. You get an architecture and a fixed-scope plan priced to the line item. If we're not the right fit, this is where we say so.</p>
+            <p class="process-output">→ Architecture &amp; fixed-scope plan</p>
+          </li>
+          <li class="process-step reveal">
+            <span class="process-num">Phase 02</span>
+            <h3>Architect</h3>
+            <p>System design, data models, and interface foundations settled before feature code begins. Every consequential decision is written down with its trade-offs, so future engineers inherit reasons, not folklore.</p>
+            <p class="process-output">→ Technical spec &amp; design system</p>
+          </li>
+          <li class="process-step reveal">
+            <span class="process-num">Phase 03</span>
+            <h3>Build</h3>
+            <p>Working software from the first week, demonstrated every week, in repositories you own from day one. Progress is something you can use, not a percentage in a status deck.</p>
+            <p class="process-output">→ Working software, every week</p>
+          </li>
+          <li class="process-step reveal">
+            <span class="process-num">Phase 04</span>
+            <h3>Harden</h3>
+            <p>Load tests, security review, failure drills, observability. We try to break it before your customers get the chance, and we launch only when we can't.</p>
+            <p class="process-output">→ A launch you can sleep through</p>
+          </li>
+          <li class="process-step reveal">
+            <span class="process-num">Phase 05</span>
+            <h3>Evolve</h3>
+            <p>After launch, the same engineers stay on, measured against the numbers that justified the project, shipping the next capability instead of a maintenance invoice.</p>
+            <p class="process-output">→ Compounding improvement</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============ TECHNOLOGY STACK ============ -->
+    <section class="section stack" id="stack" aria-labelledby="stack-heading">
+      <div class="container">
+        <header class="section-head reveal" data-num="05">
+          <p class="eyebrow"><span class="eyebrow-index">05</span>Technology Stack</p>
+          <h2 id="stack-heading" class="section-title">Chosen for the decade,<br /><em>not the demo.</em></h2>
+          <p class="section-sub">Technology choices are business decisions. We pick tools your team can hire for, your auditors can approve, and your product can still rely on in year five.</p>
+        </header>
+
+        <div class="stack-grid">
+          <div class="stack-col reveal">
+            <h3 class="stack-col-title">Languages &amp; Frameworks</h3>
+            <p class="stack-col-note">Typed end to end. Boring on purpose.</p>
+            <ul class="chip-list">
+              <li>TypeScript</li><li>React</li><li>Next.js</li><li>Python</li><li>Go</li><li>Swift</li><li>Rust</li><li>Node.js</li>
+            </ul>
+          </div>
+          <div class="stack-col reveal">
+            <h3 class="stack-col-title">AI &amp; Data</h3>
+            <p class="stack-col-note">Nothing trusted until it's measured.</p>
+            <ul class="chip-list">
+              <li>OpenAI</li><li>Anthropic</li><li>PyTorch</li><li>LangGraph</li><li>pgvector</li><li>dbt</li><li>Snowflake</li><li>Kafka</li>
+            </ul>
+          </div>
+          <div class="stack-col reveal">
+            <h3 class="stack-col-title">Cloud &amp; Infrastructure</h3>
+            <p class="stack-col-note">Built to fail gracefully, and rarely.</p>
+            <ul class="chip-list">
+              <li>AWS</li><li>Google Cloud</li><li>Kubernetes</li><li>Terraform</li><li>Vercel</li><li>Cloudflare</li><li>Docker</li><li>Grafana</li>
+            </ul>
+          </div>
+          <div class="stack-col reveal">
+            <h3 class="stack-col-title">Product &amp; Platform</h3>
+            <p class="stack-col-note">Chosen so your team can hire for it.</p>
+            <ul class="chip-list">
+              <li>PostgreSQL</li><li>Redis</li><li>GraphQL</li><li>Stripe</li><li>Figma</li><li>Linear</li><li>Playwright</li><li>GitHub Actions</li>
+            </ul>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <section class="section alt">
-        <div class="container narrow">
-          <h2>Struggling to Grow Your Business Online?</h2>
-          <div class="cards four">
-            <article>No consistent leads</article>
-            <article>Poor website performance</article>
-            <article>Low visibility on Google</article>
-            <article>Manual, time-consuming processes</article>
-          </div>
-          <p class="note">
-            We fix all of this with a complete digital growth system.
-          </p>
+    <!-- ============ CASE STUDIES ============ -->
+    <section class="section cases" id="cases" aria-labelledby="cases-heading">
+      <div class="container">
+        <header class="section-head reveal" data-num="06">
+          <p class="eyebrow"><span class="eyebrow-index">06</span>Case Studies</p>
+          <h2 id="cases-heading" class="section-title">Every engagement ends<br />in <em>a number.</em></h2>
+          <p class="section-sub">Before-and-afters from three recent engagements. Client references available for each.</p>
+        </header>
+
+        <div class="case-grid">
+          <article class="case-card glass reveal">
+            <p class="case-metric"><span data-count="94">94</span><span class="case-unit">%</span></p>
+            <p class="case-metric-label">reduction in manual review time</p>
+            <h3>Quantia: document intelligence</h3>
+            <p>Forty people reviewed 30,000 legal documents a day. The pipeline we built classifies, extracts, and validates them first. People now handle only the 6% that genuinely needs human judgment.</p>
+            <p class="case-footnote">Enterprise SaaS · 14-week delivery</p>
+          </article>
+
+          <article class="case-card glass reveal">
+            <p class="case-metric"><span data-count="3.4" data-decimals="1">3.4</span><span class="case-unit">×</span></p>
+            <p class="case-metric-label">increase in checkout conversion</p>
+            <h3>Vantora: commerce replatform</h3>
+            <p>Vantora's checkout was losing customers they had already paid to acquire. The rebuild loads in 180 milliseconds, keeps inventory honest in real time, and turned the same traffic into 3.4× the orders.</p>
+            <p class="case-footnote">Retail · 20-week delivery</p>
+          </article>
+
+          <article class="case-card glass reveal">
+            <p class="case-metric"><span data-count="12">12</span><span class="case-unit">wks</span></p>
+            <p class="case-metric-label">from first call to production launch</p>
+            <h3>Halcyon: treasury automation</h3>
+            <p>Halcyon reconciled nine banking partners by hand while competitors automated. First call to production took one quarter, SOC 2 controls included, audit passed on the first attempt.</p>
+            <p class="case-footnote">Fintech · 12-week delivery</p>
+          </article>
         </div>
-      </section>
 
-      <section id="system" class="section">
-        <div class="container">
-          <h2>Our Proven Growth System</h2>
-          <div class="cards five">
-            <article><strong>1. Attention</strong><span>Marketing</span></article>
-            <article><strong>2. Conversion</strong><span>Website/Funnels</span></article>
-            <article><strong>3. Visibility</strong><span>SEO</span></article>
-            <article><strong>4. Automation</strong><span>Digitization</span></article>
-            <article><strong>5. Growth</strong><span>Analytics & Scaling</span></article>
-          </div>
-          <p class="note">
-            Everything works together to generate, convert, and retain customers.
-          </p>
+        <div class="cta-line reveal">
+          <p>References for every engagement, available on request.</p>
+          <a href="#contact" data-prefill-call>Ask for them on a strategy call
+            <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <section id="services" class="section alt">
-        <div class="container">
-          <h2>Services</h2>
-          <div class="cards service-grid">
-            <article>
-              <h3>Digital Marketing</h3>
-              <ul>
-                <li>Ads (Meta, Google, TikTok)</li>
-                <li>Social media strategy</li>
-                <li>Content creation</li>
-              </ul>
-            </article>
-            <article>
-              <h3>Website & Funnels</h3>
-              <ul>
-                <li>High-converting websites</li>
-                <li>Landing pages</li>
-                <li>Sales funnels</li>
-              </ul>
-            </article>
-            <article>
-              <h3>SEO</h3>
-              <ul>
-                <li>On-page & technical SEO</li>
-                <li>Local SEO</li>
-                <li>Content strategy</li>
-              </ul>
-            </article>
-            <article>
-              <h3>Automation</h3>
-              <ul>
-                <li>CRM systems</li>
-                <li>WhatsApp & email automation</li>
-                <li>Booking & payments</li>
-              </ul>
-            </article>
-            <article>
-              <h3>Analytics</h3>
-              <ul>
-                <li>Tracking & reporting</li>
-                <li>Optimization</li>
-                <li>Scaling</li>
-              </ul>
-            </article>
-          </div>
+    <!-- ============ TESTIMONIALS ============ -->
+    <section class="section testimonials" id="testimonials" aria-labelledby="testimonials-heading">
+      <div class="container">
+        <header class="section-head reveal" data-num="07">
+          <p class="eyebrow"><span class="eyebrow-index">07</span>Testimonials</p>
+          <h2 id="testimonials-heading" class="section-title">The part we can't<br /><em>write ourselves.</em></h2>
+        </header>
+
+        <figure class="testimonial-feature reveal">
+          <blockquote>
+            <p>&ldquo;I've hired four agencies in my career and regretted three. Malixis argued with our spec, cut a feature we loved, and shipped a system that has run for two years without a critical incident. That argument saved us six months.&rdquo;</p>
+          </blockquote>
+          <figcaption>
+            <span class="testimonial-avatar" aria-hidden="true">EK</span>
+            <span class="testimonial-id"><strong>Elena Kovář</strong><span>Chief Technology Officer, Ardent Capital</span></span>
+          </figcaption>
+        </figure>
+
+        <div class="testimonial-grid">
+          <figure class="testimonial-card glass reveal">
+            <blockquote><p>&ldquo;Their evaluation suite failed our model on cases our own clinicians hadn't considered. That was the moment I knew this wasn't a demo shop.&rdquo;</p></blockquote>
+            <figcaption>
+              <span class="testimonial-avatar" aria-hidden="true">MO</span>
+              <span class="testimonial-id"><strong>Marcus Oyelaran</strong><span>VP of Engineering, Novaria Health</span></span>
+            </figcaption>
+          </figure>
+          <figure class="testimonial-card glass reveal">
+            <blockquote><p>&ldquo;Twelve weeks from kickoff to production. Our board assumed the date was optimistic. It wasn't.&rdquo;</p></blockquote>
+            <figcaption>
+              <span class="testimonial-avatar" aria-hidden="true">SL</span>
+              <span class="testimonial-id"><strong>Sarah Lindqvist</strong><span>Chief Executive Officer, Halcyon Systems</span></span>
+            </figcaption>
+          </figure>
+          <figure class="testimonial-card glass reveal">
+            <blockquote><p>&ldquo;They documented decisions we didn't know we'd need to defend. When our audit came, the answers were already written.&rdquo;</p></blockquote>
+            <figcaption>
+              <span class="testimonial-avatar" aria-hidden="true">DR</span>
+              <span class="testimonial-id"><strong>Daniel Reyes</strong><span>Head of Product, Polarline</span></span>
+            </figcaption>
+          </figure>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <section class="section">
-        <div class="container narrow">
-          <h2>What You Can Expect</h2>
-          <ul class="benefits">
-            <li>More qualified leads</li>
-            <li>Higher conversion rates</li>
-            <li>Increased online visibility</li>
-            <li>Automated business processes</li>
-            <li>Scalable growth systems</li>
+    <!-- ============ COMPARISON ============ -->
+    <section class="section compare" id="compare" aria-labelledby="compare-heading">
+      <div class="container">
+        <header class="section-head reveal" data-num="08">
+          <p class="eyebrow"><span class="eyebrow-index">08</span>The Difference</p>
+          <h2 id="compare-heading" class="section-title">Most agencies sell hours.<br /><em>We sell outcomes.</em></h2>
+          <p class="section-sub">Compare us the way you'll be compared: line by line, from the buyer's side of the table.</p>
+        </header>
+
+        <div class="compare-wrap reveal">
+          <table class="compare-table">
+            <caption class="sr-only">Malixis compared with a typical agency, across six dimensions</caption>
+            <thead>
+              <tr>
+                <th scope="col"><span class="sr-only">Dimension</span></th>
+                <th scope="col">A typical agency</th>
+                <th scope="col" class="malixis-col">Malixis</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">The team</th>
+                <td data-label="A typical agency">Senior faces in the pitch, junior hands on the build.</td>
+                <td data-label="Malixis" class="malixis-col"><svg width="13" height="13" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2.5 8.5l4 4 7-9" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>The people you meet are the people who ship. There is no bench.</td>
+              </tr>
+              <tr>
+                <th scope="row">Scope &amp; price</th>
+                <td data-label="A typical agency">Open-ended hourly billing that rewards slow work.</td>
+                <td data-label="Malixis" class="malixis-col"><svg width="13" height="13" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2.5 8.5l4 4 7-9" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Fixed scope and price, agreed before the first sprint.</td>
+              </tr>
+              <tr>
+                <th scope="row">Progress</th>
+                <td data-label="A typical agency">Status decks, burndown charts, and &ldquo;almost there.&rdquo;</td>
+                <td data-label="Malixis" class="malixis-col"><svg width="13" height="13" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2.5 8.5l4 4 7-9" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Working software, demonstrated to you every single week.</td>
+              </tr>
+              <tr>
+                <th scope="row">AI claims</th>
+                <td data-label="A typical agency">A demo that impresses and quietly never ships.</td>
+                <td data-label="Malixis" class="malixis-col"><svg width="13" height="13" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2.5 8.5l4 4 7-9" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Evaluation suites, guardrails, and a documented cost model.</td>
+              </tr>
+              <tr>
+                <th scope="row">Ownership</th>
+                <td data-label="A typical agency">Their repositories, until the final invoice clears.</td>
+                <td data-label="Malixis" class="malixis-col"><svg width="13" height="13" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2.5 8.5l4 4 7-9" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Your repositories and cloud accounts from day one.</td>
+              </tr>
+              <tr>
+                <th scope="row">After launch</th>
+                <td data-label="A typical agency">A handover deck and a goodbye.</td>
+                <td data-label="Malixis" class="malixis-col"><svg width="13" height="13" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2.5 8.5l4 4 7-9" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>The same engineers, accountable to the numbers that justified the project.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <aside class="cta-band glass reveal" aria-label="Book a strategy call">
+          <div class="cta-band-copy">
+            <h3>Stop buying hours. <em>Start buying outcomes.</em></h3>
+            <p>Thirty minutes with a partner: technical questions, honest answers, and a clear next step, whether or not it's with us.</p>
+          </div>
+          <div class="cta-band-action">
+            <a href="#contact" class="btn btn-primary" data-prefill-call>Book a strategy call
+              <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+            <p class="cta-band-note">No deck. No pressure. Two Q4 slots remaining.</p>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- ============ FAQ ============ -->
+    <section class="section faq" id="faq" aria-labelledby="faq-heading">
+      <div class="container faq-layout">
+        <header class="section-head reveal">
+          <p class="eyebrow"><span class="eyebrow-index">09</span>FAQ</p>
+          <h2 id="faq-heading" class="section-title">Fair questions,<br /><em>straight answers.</em></h2>
+          <p class="section-sub">If yours isn't here, <a class="inline-link" href="#contact">ask a partner directly</a> and you'll have an answer within one business day.</p>
+        </header>
+
+        <div class="faq-list reveal">
+          <details class="faq-item" open>
+            <summary>
+              <span>Who do you typically work with?</span>
+              <span class="faq-icon" aria-hidden="true"></span>
+            </summary>
+            <div class="faq-answer"><p>Funded startups shipping their first serious product, scale-ups mid-rearchitecture, and enterprise teams accountable for systems that cannot fail, most often in fintech, healthcare, logistics, and AI-native software. We run a small number of engagements at once, and we protect that limit because it is why the work holds up.</p></div>
+          </details>
+          <details class="faq-item">
+            <summary>
+              <span>How do engagements work?</span>
+              <span class="faq-icon" aria-hidden="true"></span>
+            </summary>
+            <div class="faq-answer"><p>Every engagement starts with a two-week Discovery sprint that produces an architecture, a delivery plan, and a fixed-scope proposal with a price attached. That plan is yours to keep. Take it to any builder you like. Most clients continue with us, but the decision should be easy either way.</p></div>
+          </details>
+          <details class="faq-item">
+            <summary>
+              <span>Do you build production AI or prototypes?</span>
+              <span class="faq-icon" aria-hidden="true"></span>
+            </summary>
+            <div class="faq-answer"><p>Production systems. Prototypes are how we test assumptions in week two, not what we hand over in week twelve. Every AI system we ship includes an evaluation suite, monitoring, guardrails, and a documented cost model, because a model that cannot be measured cannot be trusted.</p></div>
+          </details>
+          <details class="faq-item">
+            <summary>
+              <span>Who will actually work on our project?</span>
+              <span class="faq-icon" aria-hidden="true"></span>
+            </summary>
+            <div class="faq-answer"><p>The people you meet in the first call. There is no bench of juniors behind a senior pitch. Our average engineer has eleven years of experience, and no one splits their week across multiple clients.</p></div>
+          </details>
+          <details class="faq-item">
+            <summary>
+              <span>Who owns the code and IP?</span>
+              <span class="faq-icon" aria-hidden="true"></span>
+            </summary>
+            <div class="faq-answer"><p>You do, from the first commit. We build in your repositories and your cloud accounts, so ownership is never a handover at the end. It is the default from day one. If we vanished mid-project, you would lose nothing but us.</p></div>
+          </details>
+          <details class="faq-item">
+            <summary>
+              <span>How do you handle security and compliance?</span>
+              <span class="faq-icon" aria-hidden="true"></span>
+            </summary>
+            <div class="faq-answer"><p>We work inside your compliance envelope: least-privilege access, SSO, audit trails, and infrastructure that lives in your cloud accounts, not ours. We have delivered under SOC 2, HIPAA, and PCI-DSS constraints, and our engineers sign your security policies before touching a repository.</p></div>
+          </details>
+          <details class="faq-item">
+            <summary>
+              <span>What happens after launch?</span>
+              <span class="faq-icon" aria-hidden="true"></span>
+            </summary>
+            <div class="faq-answer"><p>A stabilization period and a documented handover are built into every engagement, so your team can run what we built. Most clients then keep a senior team on retainer for new capabilities. 98% of our business is companies that have shipped with us before.</p></div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section class="section contact" id="contact" aria-labelledby="contact-heading">
+      <div class="container contact-layout">
+        <div class="contact-intro reveal">
+          <p class="eyebrow"><span class="eyebrow-index">10</span>Contact</p>
+          <h2 id="contact-heading" class="section-title">Start with a conversation,<br /><em>not a contract.</em></h2>
+          <p class="section-sub">Write a few sentences about what you're building. A senior partner, never a sales rep, reads every inquiry and replies within one business day, usually with questions.</p>
+
+          <ol class="next-steps" aria-label="What happens next">
+            <li>
+              <span class="next-step-num" aria-hidden="true">01</span>
+              <p><strong>A partner reads your note</strong> and replies within one business day.</p>
+            </li>
+            <li>
+              <span class="next-step-num" aria-hidden="true">02</span>
+              <p><strong>A 30-minute strategy call</strong> with technical questions, honest answers, no deck.</p>
+            </li>
+            <li>
+              <span class="next-step-num" aria-hidden="true">03</span>
+              <p><strong>A fixed-scope Discovery proposal</strong> that is priced, planned, and yours to keep.</p>
+            </li>
+          </ol>
+
+          <ul class="contact-facts">
+            <li>
+              <span class="contact-fact-label">Email</span>
+              <a class="inline-link" href="mailto:hello@malixis.com">hello@malixis.com</a>
+            </li>
+            <li>
+              <span class="contact-fact-label">Response time</span>
+              <span>One business day, from a partner</span>
+            </li>
+            <li>
+              <span class="contact-fact-label">Security</span>
+              <span>Your cloud, your repos, your policies</span>
+            </li>
+            <li>
+              <span class="contact-fact-label">Availability</span>
+              <span><span class="status-dot" aria-hidden="true"></span>Two engagement slots open for Q4 2026</span>
+            </li>
           </ul>
         </div>
-      </section>
 
-      <section id="process" class="section alt">
-        <div class="container">
-          <h2>How We Work</h2>
-          <div class="cards four">
-            <article><h3>Discovery</h3><p>We understand your business and goals.</p></article>
-            <article><h3>Strategy</h3><p>We design a custom growth plan.</p></article>
-            <article><h3>Execution</h3><p>We build and launch your systems.</p></article>
-            <article><h3>Optimization</h3><p>We track, improve, and scale.</p></article>
+        <form class="contact-form glass reveal" novalidate aria-label="Project inquiry form">
+          <div class="form-row">
+            <div class="form-field">
+              <label for="cf-name">Full name</label>
+              <input id="cf-name" name="name" type="text" autocomplete="name" required placeholder="Ada Lovelace" />
+            </div>
+            <div class="form-field">
+              <label for="cf-email">Work email</label>
+              <input id="cf-email" name="email" type="email" autocomplete="email" required placeholder="ada@company.com" />
+            </div>
           </div>
-        </div>
-      </section>
-
-      <section id="work" class="section">
-        <div class="container">
-          <h2>Case Studies / Social Proof</h2>
-          <div class="cards three">
-            <article><h3>Lead Generation</h3><p>Client had no leads - now generates 50+ per month.</p></article>
-            <article><h3>Conversion Improvement</h3><p>Website conversion increased by 3x.</p></article>
-            <article><h3>Visibility Growth</h3><p>Local SEO moved business into top map results.</p></article>
+          <div class="form-row">
+            <div class="form-field">
+              <label for="cf-company">Company</label>
+              <input id="cf-company" name="company" type="text" autocomplete="organization" placeholder="Company Inc." />
+            </div>
+            <div class="form-field">
+              <label for="cf-budget">Project budget</label>
+              <select id="cf-budget" name="budget">
+                <option value="" selected>Select a range</option>
+                <option value="50-100">$50k to $100k</option>
+                <option value="100-250">$100k to $250k</option>
+                <option value="250-500">$250k to $500k</option>
+                <option value="500+">$500k+</option>
+              </select>
+            </div>
           </div>
-        </div>
-      </section>
-
-      <section id="plans" class="section alt">
-        <div class="container">
-          <h2>Choose Your Growth Plan</h2>
-          <div class="cards three">
-            <article><h3>Launch</h3><p>Website + basic setup</p></article>
-            <article class="featured"><h3>Growth</h3><p>Marketing + SEO + funnels</p></article>
-            <article><h3>Scale</h3><p>Full system + automation + scaling</p></article>
+          <div class="form-field">
+            <label for="cf-message">About the project</label>
+            <textarea id="cf-message" name="message" rows="5" required placeholder="What are you building, what's at stake, and when does it need to exist?"></textarea>
           </div>
-        </div>
-      </section>
+          <p class="form-error" role="alert" hidden>
+            <svg width="15" height="15" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M8 1.5L15 14H1L8 1.5z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/><path d="M8 6.5v3.2" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/><circle cx="8" cy="11.8" r="0.7" fill="currentColor"/></svg>
+            <span>Add your name, a valid work email, and a sentence about the project. That's all we need.</span>
+          </p>
+          <button type="submit" class="btn btn-primary btn-block">Talk to a partner
+            <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <p class="form-note">Every inquiry is confidential. NDAs welcome, ours or yours.</p>
 
-      <section id="faq" class="section">
-        <div class="container narrow">
-          <h2>FAQ</h2>
-          <div class="faq">
-            <details><summary>How long does it take to see results?</summary><p>Initial wins can appear in weeks, then compound over time.</p></details>
-            <details><summary>Do you work with all industries?</summary><p>Yes, we tailor strategy per business model and market.</p></details>
-            <details><summary>Do you offer ongoing support?</summary><p>Yes, with optimization, reporting, and scaling support.</p></details>
-            <details><summary>What makes you different?</summary><p>We build one connected growth system, not isolated services.</p></details>
+          <div class="form-success" hidden>
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" aria-hidden="true"><circle cx="20" cy="20" r="19" stroke="currentColor" stroke-width="1.5"/><path d="M13 20.5l5 5 9-10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <h3>Received. A partner is reading it.</h3>
+            <p>You'll hear back within one business day. If your project isn't a fit for us, we'll say so and point you somewhere better.</p>
           </div>
-        </div>
-      </section>
-
-      <section id="cta" class="section cta">
-        <div class="container narrow center">
-          <h2>Ready to Grow Your Business?</h2>
-          <p>Let's build a system that delivers real results.</p>
-          <div class="actions center">
-            <a href="#" class="btn btn-primary">Book a Free Consultation</a>
-            <a href="#" class="btn btn-ghost">Contact Us</a>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <footer class="footer">
-      <div class="container footer-grid">
-        <div>
-          <a class="brand" href="#">
-            <span class="brand-mark">M</span>
-            <span class="brand-name">MALIXIS</span>
-          </a>
-          <p>Digital systems for scalable business growth.</p>
-        </div>
-        <div>
-          <h4>Services</h4>
-          <p>Marketing, Websites, SEO, Automation, Analytics</p>
-        </div>
-        <div>
-          <h4>Contact</h4>
-          <p>hello@malixis.com</p>
-        </div>
+        </form>
       </div>
-      <p class="copy">© 2026 Malixis. All rights reserved.</p>
-    </footer>
-  </body>
+    </section>
+  </main>
+
+  <a href="#contact" class="floating-cta btn btn-primary" data-prefill-call>Book a strategy call
+    <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </a>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a class="brand" href="#top" aria-label="Malixis, back to top">
+            <svg class="brand-mark" width="22" height="22" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+              <path d="M16 3l3.1 9.9L29 16l-9.9 3.1L16 29l-3.1-9.9L3 16l9.9-3.1z" fill="url(#sparkGradFooter)" />
+              <defs>
+                <linearGradient id="sparkGradFooter" x1="3" y1="3" x2="29" y2="29" gradientUnits="userSpaceOnUse">
+                  <stop stop-color="#b3c7ff" />
+                  <stop offset="1" stop-color="#5a6cf0" />
+                </linearGradient>
+              </defs>
+            </svg>
+            <span class="brand-name">Malixis</span>
+          </a>
+          <p class="footer-tagline">The studio companies call when the software has to work.</p>
+          <p class="footer-status"><span class="status-dot" aria-hidden="true"></span>All systems operational</p>
+        </div>
+
+        <nav class="footer-nav" aria-label="Footer">
+          <div class="footer-col">
+            <h4>Studio</h4>
+            <ul>
+              <li><a href="#services">Services</a></li>
+              <li><a href="#solutions">Solutions</a></li>
+              <li><a href="#process">Process</a></li>
+              <li><a href="#stack">Technology</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Work</h4>
+            <ul>
+              <li><a href="#work">Featured projects</a></li>
+              <li><a href="#cases">Case studies</a></li>
+              <li><a href="#testimonials">Testimonials</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Connect</h4>
+            <ul>
+              <li><a href="#contact">Book a strategy call</a></li>
+              <li><a href="mailto:hello@malixis.com">hello@malixis.com</a></li>
+              <li><a href="#faq">FAQ</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© <span data-year>2026</span> Malixis. All rights reserved.</p>
+        <p class="footer-craft">Written, designed, and engineered in-house.</p>
+      </div>
+    </div>
+    <div class="footer-wordmark" aria-hidden="true">MALIXIS</div>
+  </footer>
+</body>
 </html>
